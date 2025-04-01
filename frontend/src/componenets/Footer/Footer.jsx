@@ -31,13 +31,13 @@ function Footer() {
           <h2>GET IN TOUCH</h2>
           <ul>
             <li>+6598421302</li>
-            <li>tasty@food.com</li>
+            <li>tasty@eats.com</li>
           </ul>
         </div>
       </div>
       <hr></hr>
       <p className="footer-copyright">
-        Copyright 2025 @ TastyFood.com - All Right Reerved
+        Copyright 2025 @ TastyEats.com - All Right Reerved
       </p>
     </div>
   );

@@ -3,7 +3,7 @@ import './PlaceOrder.css'
 
 function PlaceOrder() {
   return (
-    <div>
+    <div className='place-order'>
       
     </div>
   )

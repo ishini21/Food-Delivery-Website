@@ -63,9 +63,11 @@ import rating_starts from './rating_starts.png'
 import profile_icon from './profile_icon.png'
 import bag_icon from './bag_icon.png'
 import logout_icon from './logout_icon.png'
+import main_img from './main_img.png'
 
 export const assets = {
     logo,
+    main_img,
     basket_icon,
     header_img,
     search_icon,

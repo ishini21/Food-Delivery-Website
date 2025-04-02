@@ -4,15 +4,16 @@ import fs from 'fs'
 //Add food
 export const  addFood = async (req,res) => {
 
-    
-    let image_filename = `${req.file.filename}`;
+    const { name, description, price, category } = req.body;
+    //let image_filename = `${req.file.filename}`;
+    const image = req.file ? req.file.path : null;
 
     const food = new foodModel({
-        name:req.body.name,
-        description:req.body.description,
-        price:req.body.price,
-        category:req.body.category,
-        image:image_filename,
+        name,
+        description,
+        price,
+        category,
+        image,
 
     })
     try {

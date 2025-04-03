@@ -4,7 +4,7 @@ import './Order.css'
 function Orders() {
   return (
     <div>
-      
+      Orders
     </div>
   )
 }

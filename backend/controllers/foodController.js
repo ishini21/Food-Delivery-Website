@@ -6,7 +6,8 @@ export const  addFood = async (req,res) => {
 
     const { name, description, price, category } = req.body;
     //let image_filename = `${req.file.filename}`;
-    const image = req.file ? req.file.path : null;
+    const image = req.file.filename;
+    //const image = req.file ? req.file.path : null;
 
     const food = new foodModel({
         name,

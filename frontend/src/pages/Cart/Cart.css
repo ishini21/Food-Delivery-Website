@@ -48,7 +48,7 @@ cursor: pointer;
 .cart-total button{
     border: none;
     color: white;
-    background-color: tomato;
+    background-color: #7F00FF;
     width: max(15vw,200px);
     padding: 12px 0px;
     border-radius: 4px;

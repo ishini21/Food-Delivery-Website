@@ -3,8 +3,8 @@ import './List.css'
 import axios from "axios";
 import { toast } from 'react-toastify';
 
-function List() {
-  const url = "http://localhost:4000";
+const List = ({url}) => {
+ 
   const [list,setList] = useState([]);
 
   const fetchList = async () => {
@@ -21,7 +21,7 @@ function List() {
     //console.log(foodId);
     try {
       const response = await axios.delete(`${url}/api/food/delete-food/${foodId}`);
-      console.log(response);
+      //console.log(response);
       if (response.data.success) {
         toast.success('Food item deleted successfully');
         await fetchList();

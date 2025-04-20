@@ -1,4 +1,4 @@
-import React, { useContext, useState } from 'react'
+import React, { useContext, useEffect, useState } from 'react'
 import './PlaceOrder.css'
 import { StoreContext } from '../../context/StoreContext'
 
@@ -24,8 +24,25 @@ function PlaceOrder() {
     setData(data=>({...data,[name]:value}))
   }
 
+  const placeOrder = async (e)=>{
+    e.preventDefault();
+    let orderItems = [];
+    food_list.map((item)=>{
+      if(cartItems[item._id]>0){
+        let itemInfo = item;
+        itemInfo["quantity"] = cartItems[item._id];
+        orderItems.push(itemInfo)
+      }
+    })
+
+    console.log(orderItems);
+
+  }
+useEffect(()=>{
+ console.log(data);
+},[data])
   return (
-    <div className='place-order'>
+    <form onSubmit={placeOrder} className='place-order'>
       <div className="place-order-left">
         <p className="title">Delivery Information</p>
         <div className="multi-fields">
@@ -39,10 +56,10 @@ function PlaceOrder() {
           <input name='state' onChange={onChangeHandler} value={data.state}type="text" placeholder='State' />
         </div>
         <div className="multi-fields">
-          <input type="text" placeholder='Zip code' />
-          <input type="text" placeholder='Country' />
+          <input name='zipcode' onChange={onChangeHandler} value={data.zipcode} type="text" placeholder='Zip code' />
+          <input name='country' onChange={onChangeHandler} value={data.country} type="text" placeholder='Country' />
         </div>
-        <input type='text' placeholder='phone'></input>
+        <input name='phone' onChange={onChangeHandler} value={data.phone} type='text' placeholder='phone'></input>
       </div>
       <div className="place-order-right">
       <div className="cart-total">
@@ -62,11 +79,11 @@ function PlaceOrder() {
               <b>${getTotalCartAmount()===0?0:getTotalCartAmount() + 2}</b>
             </div>
           </div>
-          <button>Proceed To Payment</button>
+          <button type='submit'>Proceed To Payment</button>
         </div>
 
       </div>
-    </div>
+    </form>
   )
 }
 

@@ -24,8 +24,8 @@
     cursor: pointer;
 }
 .sidebar-option.active{
-    background-color:#fff0ed;
-    border-color:tomato;
+    background-color:#D8BFD8;
+    border-color:#7F00FF;
 }
 @media (max-width:900px){
     .sidebar-option p{

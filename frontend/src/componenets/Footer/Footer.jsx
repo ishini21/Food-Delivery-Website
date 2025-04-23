@@ -7,7 +7,7 @@ function Footer() {
     <div className="footer" id="footer">
       <div className="footer-content">
         <div className="footer-content-left">
-          <img src={assets.logo} alt="" />
+          <img  alt="" />
           <p>
             Your favorite meals, just a click away. Order now!. Freshly
             prepared, safely delivered. Enjoy with peace of mind
